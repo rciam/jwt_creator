@@ -41,7 +41,7 @@ import java.util.UUID;
 public class EntityStatementGenerator {
 
     private static final String DEFAULT_CLIENT_ID = "https://offa.hadem.vm.grnet.gr";
-    private static final String DEFAULT_AUD = "https://aai-dev.egi.eu/auth/realms/id";
+    private static final String DEFAULT_AUD = "https://rciam.example.org/auth/realms/rciam";
     private static final JWSAlgorithm DEFAULT_ALGORITHM = JWSAlgorithm.ES512;
 
     static {
@@ -79,7 +79,7 @@ public class EntityStatementGenerator {
                     String inputClientId = scanner.nextLine().trim();
                     String clientId = (!inputClientId.isEmpty()) ? inputClientId : DEFAULT_CLIENT_ID;
 
-                    System.out.print("Enter TOKEN_ENDPOINT [" + DEFAULT_AUD + "]: ");
+                    System.out.print("Enter AUDIENCE [" + DEFAULT_AUD + "]: ");
                     String inputAud = scanner.nextLine().trim();
                     String aud = (!inputAud.isEmpty()) ? inputAud : DEFAULT_AUD;
 
